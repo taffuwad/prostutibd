@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prostuti BD | Understand, Don't Memorize</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- SplitType for Text Animations -->
+    <script src="https://unpkg.com/split-type"></script>
+
+    
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <div class="logo-mark">P</div>
+                PROSTUTI BD
+            </a>
+            
+            <div class="nav-links">
+                <a href="#problem">Why it is needed</a>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#pricing">Plans</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#" class="btn-login">LOGIN</a>
+                <a href="#" class="btn-register">REGISTRATION</a>
+            </div>
+
+            <button class="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- FLOATING PANELS -->
+    <div class="solution-panel" id="solutionPanel">
+        <h4><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> With Prostuti</h4>
+        <p id="solutionText">Solution text here</p>
+    </div>
+
+    <div class="feature-preview" id="featurePreview">
+        <img src="" alt="Feature Preview" id="featureImage">
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-label">SSC PREPARATION · CLASS 9 & 10</span>
+                <h1>
+                    <span class="hf">Don’t Just Read</span>
+                    <span class="hs">Master it</span>
+                </h1>
+                <p>Step-by-step Bengali explanations and instant quizzes for Class 9–10 (SSC). Learn like having a personal tutor, anytime.</p>
+                <div class="hero-actions">
+                    <a href="#" class="btn-primary">REGISTER FOR FREE &rarr;</a>
+                    <a href="#" class="btn-secondary">STUDENT LOGIN</a>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- SECTION 2: PROBLEM -> SOLUTION -->
+    <section class="problem-section" id="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2>Don't memorize,<br>now understand.</h2>
+                <p>Almost all students have the same story. We want to change that.</p>
+            </div>
+
+            <div class="problem-list">
+                <!-- Problem 1 -->
+                <div class="problem-item" data-solution="Ask questions at any time by choosing a subject, chapter, and topic to get step-by-step explanations.">
+                    <div class="problem-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                    </div>
+                    <div class="problem-text">If you're stuck studying at night, there's no one to ask.</div>
+                    <!-- <div class="mobile-solution">Ask questions at any time by choosing a subject, chapter, and topic to get step-by-step explanations.</div> -->
+                </div>
+
+                <!-- Problem 2 -->
+                <div class="problem-item" data-solution="Learn in Bengali with guided explanations and a short understanding quiz.">
+                    <div class="problem-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                    </div>
+                    <div class="problem-text">I memorize the guide, but I can't even turn the questions around.</div>
+                    <!-- <div class="mobile-solution">Learn in Bengali with guided explanations and a short understanding quiz.</div> -->
+                </div>
+
+                <!-- Problem 3 -->
+                <div class="problem-item" data-solution="See your weak chapters using a simple red, yellow, and green progress indicator.">
+                    <div class="problem-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                    </div>
+                    <div class="problem-text">I can feel which chapter I am weak in before the exam.</div>
+                    <!-- <div class="mobile-solution">See your weak chapters using a simple red, yellow, and green progress indicator.</div> -->
+                </div>
+
+                <!-- Problem 4 -->
+                <div class="problem-item" data-solution="Get affordable SSC preparation support with Prostuti's monthly plan.">
+                    <div class="problem-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                    </div>
+                    <div class="problem-text">Private tutors cost a lot and don't have the time.</div>
+                    <!-- <div class="mobile-solution">Get affordable SSC preparation support with Prostuti's monthly plan.</div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: FEATURES -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>All your reading tasks in one place.</h2>
+                <p>There are four steps: understanding, practice, verification, and revision.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card" data-image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop">
+                    <div class="feature-top">
+                        <span class="feature-num">01</span>
+                        <div class="feature-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+                    </div>
+                    <div>
+                        <h3>AI Study Companion</h3>
+                        <p>Choose Subject &rarr; Chapter &rarr; Topic, it will explain step by step in Bengali.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card" data-image="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800&auto=format&fit=crop">
+                    <div class="feature-top">
+                        <span class="feature-num">02</span>
+                        <div class="feature-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+                    </div>
+                    <div>
+                        <h3>Textbook Mode</h3>
+                        <p>Take a picture of a book page and follow the lines for a simple explanation.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card" data-image="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=800&auto=format&fit=crop">
+                    <div class="feature-top">
+                        <span class="feature-num">03</span>
+                        <div class="feature-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+                    </div>
+                    <div>
+                        <h3>Smart MCQ Exam</h3>
+                        <p>Chapter-wise tests with timers, immediate explanations of mistakes.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card" data-image="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=800&auto=format&fit=crop">
+                    <div class="feature-top">
+                        <span class="feature-num">04</span>
+                        <div class="feature-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+                    </div>
+                    <div>
+                        <h3>Board Question Bank</h3>
+                        <p>Scans of all original SSC question papers and solutions from 2015–2026.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card" data-image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop">
+                    <div class="feature-top">
+                        <span class="feature-num">05</span>
+                        <div class="feature-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+                    </div>
+                    <div>
+                        <h3>Daily Exams</h3>
+                        <p>Daily live routine exams, national leaderboards, and instant rankings.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card" data-image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop">
+                    <div class="feature-top">
+                        <span class="feature-num">06</span>
+                        <div class="feature-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+                    </div>
+                    <div>
+                        <h3>Weak Chapter Detector</h3>
+                        <p>You can tell which chapter you are weak in by looking at the color.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="feature-card" data-image="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800&auto=format&fit=crop">
+                    <div class="feature-top">
+                        <span class="feature-num">07</span>
+                        <div class="feature-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+                    </div>
+                    <div>
+                        <h3>Mistake Book</h3>
+                        <p>If you correct your mistakes in one place, 3 times, you will master it.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="feature-card" data-image="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop">
+                    <div class="feature-top">
+                        <span class="feature-num">08</span>
+                        <div class="feature-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+                    </div>
+                    <div>
+                        <h3>Smart Planner</h3>
+                        <p>Weekly routine and Pomodoro study countdown.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: HOW IT WORKS -->
+    <section class="how-it-works-section" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Understanding from getting stuck in 3 steps.</h2>
+            </div>
+
+            <div class="steps-container">
+                <div class="steps-line">
+                    <div class="steps-line-progress" id="stepProgress"></div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Choose a topic</h3>
+                        <p>Subject &rarr; Chapter &rarr; Topic. Or take a picture of the book page.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Understand step by step</h3>
+                        <p>Explain in Bengali like a teacher. If you don't understand, "Make it easier to understand."</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Verify</h3>
+                        <p>Take the mini quiz, Teach Back, and revision to see if you really remember.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: PRICING -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose the right plan for your preparation.</h2>
+                <p>Simple and affordable SSC preparation plans.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Plan 1 -->
+                <div class="pricing-card">
+                    <div class="plan-name">Free</div>
+                    <div class="plan-price">0 <span>BDT</span></div>
+                    <div class="plan-desc">Perfect for trying out the platform.</div>
+                    <ul class="plan-features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 5 AI questions a day</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 2 MCQ tests a week</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Basic Dashboard</li>
+                    </ul>
+                    <button class="btn-plan">Start for free</button>
+                </div>
+
+                <!-- Plan 2 (Pro) -->
+                <div class="pricing-card pro">
+                    <div class="pro-badge">Recommended</div>
+                    <div class="plan-name">Pro Monthly</div>
+                    <div class="plan-price">199 <span>BDT</span></div>
+                    <div class="plan-desc">Complete SSC preparation support.</div>
+                    <ul class="plan-features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited AI tutors</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 539+ Board Questions</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Textbook Mode</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Daily exams & leaderboards</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Mistake Book & Planner</li>
+                    </ul>
+                    <button class="btn-plan">Choose Pro</button>
+                </div>
+
+                <!-- Plan 3 (Placeholder) -->
+                <div class="pricing-card">
+                    <div class="plan-name">Premium+</div>
+                    <div class="plan-price">499 <span>BDT</span></div>
+                    <div class="plan-desc">For serious students who want more.</div>
+                    <ul class="plan-features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything in Pro</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 1-on-1 Teacher review</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority Support</li>
+                    </ul>
+                    <button class="btn-plan">Get Premium+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: FINAL CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Let's start reading with understanding from tonight.</h2>
+            <p>Choose a class and subject in 2 minutes, take a 5-question level test.</p>
+            
+                <!-- From Uiverse.io by KINGFRESS --> 
+                <button class="st-go">
+                <span class="span-mother">
+                    <span>s</span>
+                    <span>t</span>
+                    <span>a</span>
+                    <span>r</span>
+                    <span>t</span>
+                    
+                </span>
+                <span class="span-mother2">
+                    <span>s</span>
+                    <span>t</span>
+                    <span>a</span>
+                    <span>r</span>
+                    <span>t</span>
+                </span>
+                </button>
+
+           
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-text">
+                &copy; 2026 Prostuti BD. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
+</body>
+</html>
