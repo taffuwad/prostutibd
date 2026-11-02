@@ -214,17 +214,19 @@ if (!prefersReducedMotion) {
     },
   });
 
-  gsap.from(".section-header > *", {
-    y: 30,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.12,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".section-header",
-      start: "top 85%",
-      once: true,
-    },
+  document.querySelectorAll(".section-header").forEach((header) => {
+    gsap.from(header.children, {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.12,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: header,
+        start: "top 85%",
+        once: true,
+      },
+    });
   });
 
   gsap.from(".problem-item", {
