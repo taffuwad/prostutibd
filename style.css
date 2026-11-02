@@ -161,6 +161,10 @@ html.lenis {
   font-size: 1rem;
 }
 
+.nav-menu {
+  display: contents;
+}
+
 .nav-links {
   display: flex;
   gap: 2.5rem;
@@ -409,7 +413,7 @@ html.lenis {
   cursor: crosshair;
   position: relative;
   text-transform: uppercase;
-  transition: padding-left 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .problem-item:hover {
@@ -431,6 +435,26 @@ html.lenis {
   font-family: var(--font-heading);
   font-weight: 600;
   transition: color 0.3s ease;
+}
+
+.mobile-solution {
+  display: none;
+  flex-basis: 100%;
+  margin: 0.75rem 0 0 3rem;
+  padding: 1rem;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  color: var(--black);
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.problem-item.active {
+  flex-wrap: wrap;
+}
+
+.problem-item.active .mobile-solution {
+  display: block;
 }
 
 /* Floating Solution Panel */
@@ -821,10 +845,11 @@ html.lenis {
 
 /* From Uiverse.io by KINGFRESS */ 
 .st-go{
-    position: absolute;
-    left: 50%;
-    bottom: 17%;
-    transform: translate(-50%);
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin: 0 auto;
 }
 
 
@@ -1047,5 +1072,283 @@ button .span-mother2 span:nth-child(6) {
   }
   .feature-preview {
     display: none;
+  }
+}
+
+/* --- MOBILE AND TABLET LAYOUTS --- */
+@media (max-width: 1024px) {
+  .hero-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 760px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --padding-x: 1.25rem;
+  }
+
+  .nav-inner {
+    position: relative;
+    height: auto;
+    min-height: 64px;
+  }
+  .logo {
+    font-size: 1.05rem;
+  }
+  .mobile-menu-btn {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: var(--black);
+    background: transparent;
+    border-radius: 8px;
+  }
+  .navbar.mobile-menu-open {
+    background-color: var(--white);
+    border-bottom-color: var(--border);
+  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: var(--padding-x);
+    right: var(--padding-x);
+    padding: 0.75rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 16px 30px rgba(17, 18, 20, 0.12);
+  }
+  .nav-menu.is-open {
+    display: flex;
+  }
+  .nav-links,
+  .nav-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .nav-links a,
+  .nav-actions a {
+    padding: 0.8rem 0.75rem;
+  }
+  .nav-actions {
+    border-top: 1px solid var(--border);
+    padding-top: 0.5rem;
+    margin-top: 0.25rem;
+  }
+  .nav-actions .btn-register {
+    text-align: center;
+  }
+
+  .hero {
+    align-items: center;
+    padding-top: calc(64px + 3rem);
+    padding-bottom: 4rem;
+    background-position: 58% center;
+  }
+  .hero-grid {
+    padding-top: 0;
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 11vw, 4.5rem);
+  }
+  .hero p {
+    margin-bottom: 1.75rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .hero-actions a {
+    text-align: center;
+    padding: 0.9rem 1rem;
+  }
+
+  .problem-section,
+  .features-section,
+  .how-it-works-section,
+  .pricing-section {
+    padding: 5rem 0;
+  }
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+  .section-header h2 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .section-header p {
+    font-size: 1rem;
+  }
+  .problem-item {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 1rem;
+    padding: 1.25rem 0;
+    cursor: pointer;
+    transition: none;
+  }
+  .problem-item:hover {
+    padding-left: 0;
+  }
+  .problem-icon {
+    margin-right: 0;
+  }
+  .problem-text {
+    font-size: clamp(1.05rem, 4.5vw, 1.35rem);
+  }
+  .problem-item:focus-visible,
+  .mobile-menu-btn:focus-visible {
+    outline: 3px solid var(--navy-light);
+    outline-offset: 3px;
+  }
+  .solution-panel,
+  .feature-preview {
+    display: none;
+  }
+  .problem-item.active .problem-text {
+    color: var(--navy);
+  }
+  .mobile-solution {
+    display: none;
+    grid-column: 2;
+    padding: 0.8rem;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    color: var(--black);
+  }
+  .problem-item.active .mobile-solution {
+    display: block;
+  }
+
+  .feature-card {
+    min-height: 240px;
+    padding: 2rem;
+  }
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+  .feature-card p {
+    max-width: none;
+  }
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .steps-line {
+    top: 0;
+    bottom: 0;
+    left: 23px;
+    width: 2px;
+    height: auto;
+  }
+  .steps-line-progress {
+    width: 100%;
+    height: 0%;
+  }
+  .step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .step-number {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .step-item h3 {
+    font-size: 1.25rem;
+  }
+  .step-item p {
+    font-size: 0.95rem;
+  }
+  .pricing-grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 480px;
+    gap: 1.5rem;
+  }
+  .pricing-card {
+    padding: 2.5rem 1.5rem;
+  }
+  .plan-price {
+    font-size: clamp(2.75rem, 12vw, 3.5rem);
+  }
+  .final-cta {
+    padding: 6rem 0;
+  }
+  .final-cta h2 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+  .final-cta p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .footer {
+    padding: 2rem 0;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .footer-text {
+    text-align: center;
+    line-height: 1.6;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 0.5rem;
+  }
+  .footer-links a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .feature-card {
+    min-height: 220px;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

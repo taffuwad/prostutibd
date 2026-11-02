@@ -137,18 +137,28 @@ if (window.matchMedia("(pointer: fine)").matches) {
       solutionPanel.classList.remove("active");
     });
   });
-} else {
-  // Mobile logic: toggle active class on tap
-  problemItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      // Close others
-      problemItems.forEach((i) => {
-        if (i !== item) i.classList.remove("active");
-      });
-      item.classList.toggle("active");
-    });
-  });
 }
+
+problemItems.forEach((item) => {
+  const toggleItem = () => {
+    problemItems.forEach((otherItem) => {
+      if (otherItem !== item) {
+        otherItem.classList.remove("active");
+        otherItem.setAttribute("aria-expanded", "false");
+      }
+    });
+    const isActive = item.classList.toggle("active");
+    item.setAttribute("aria-expanded", String(isActive));
+  };
+
+  item.addEventListener("click", toggleItem);
+  item.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleItem();
+    }
+  });
+});
 
 // --- 6. SECTION 3: FEATURE IMAGE PREVIEW ---
 const featureCards = document.querySelectorAll(".feature-card");
@@ -295,12 +305,37 @@ if (!prefersReducedMotion) {
   });
 }
 
-// --- 9. MOBILE MENU TOGGLE (Basic) ---
+// --- 9. MOBILE MENU TOGGLE ---
 const mobileBtn = document.querySelector(".mobile-menu-btn");
-const navLinks = document.querySelector(".nav-links");
-const navActions = document.querySelector(".nav-actions");
+const navMenu = document.querySelector(".nav-menu");
+const navbar = document.getElementById("navbar");
+
+function closeMobileMenu() {
+  mobileBtn.setAttribute("aria-expanded", "false");
+  mobileBtn.setAttribute("aria-label", "Open navigation menu");
+  navMenu.classList.remove("is-open");
+  navbar.classList.remove("mobile-menu-open");
+}
 
 mobileBtn.addEventListener("click", () => {
-  // Simple alert for now, can be expanded to a full screen overlay
-  alert("Mobile menu opened. (Implement full drawer if needed)");
+  const isOpen = mobileBtn.getAttribute("aria-expanded") !== "true";
+  mobileBtn.setAttribute("aria-expanded", String(isOpen));
+  mobileBtn.setAttribute(
+    "aria-label",
+    isOpen ? "Close navigation menu" : "Open navigation menu",
+  );
+  navMenu.classList.toggle("is-open", isOpen);
+  navbar.classList.toggle("mobile-menu-open", isOpen);
+});
+
+navMenu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", closeMobileMenu);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMobileMenu();
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) closeMobileMenu();
 });
