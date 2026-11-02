@@ -241,7 +241,7 @@ if (!prefersReducedMotion) {
 
   gsap.from(".problem-item", {
     y: 35,
-    opacity: 0,
+    // opacity: 0,
     duration: 0.7,
     stagger: 0.12,
     ease: "power3.out",
